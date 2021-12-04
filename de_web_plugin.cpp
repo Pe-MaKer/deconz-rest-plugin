@@ -6330,7 +6330,8 @@ void DeRestPluginPrivate::addSensorNode(const deCONZ::Node *node, const deCONZ::
                 {
                     // Many Xiaomi devices advertise non-functional Time cluster, so better use whitelist.
                     if (modelId == QLatin1String("Thermostat") || // eCozy
-                        modelId == QLatin1String("eTRV0100")) // Danfoss
+                        modelId == QLatin1String("eTRV0100") ||   // Danfoss
+                        modelId == QLatin1String("eT093WRO"))     // POPP smart thermostat
                     {
                         fpTimeSensor.inClusters.push_back(ci->id());
                     }
